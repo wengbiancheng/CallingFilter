@@ -1,12 +1,8 @@
 package com.flamingo.filterdemo.impl;
 
-import android.app.Application;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Message;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 

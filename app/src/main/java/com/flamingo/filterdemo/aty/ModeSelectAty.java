@@ -139,6 +139,8 @@ public class ModeSelectAty extends Activity implements View.OnClickListener{
                 break;
             case R.id.select_place1:
                 Log.i("TestActivity","OnClick触发4");
+                Intent intent3=new Intent(this,LocationModeAty.class);
+                startActivity(intent3);
                 break;
             case R.id.select_btn:
                 ModeSelectKeeper.writeAccessData(ModeSelectAty.this, timeCheck, blackCheck, noCheck, placeCheck);
