@@ -7,8 +7,46 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
+                    "endColumn": 41,
+                    "endOffset": 92
+                },
+                "from": {
+                    "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 109,
+                        "endColumn": 41,
+                        "endOffset": 146
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 97,
+                    "endColumn": 48,
+                    "endOffset": 141
+                },
+                "from": {
+                    "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 48,
+                        "endOffset": 103
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 146,
                     "endColumn": 57,
-                    "endOffset": 108
+                    "endOffset": 199
                 },
                 "from": {
                     "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\dimens.xml",
@@ -23,11 +61,11 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 113,
+                    "startOffset": 204,
                     "endColumn": 55,
-                    "endOffset": 164
+                    "endOffset": 255
                 },
                 "from": {
                     "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\dimens.xml",
@@ -42,11 +80,11 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 169,
+                    "startOffset": 260,
                     "endColumn": 52,
-                    "endOffset": 217
+                    "endOffset": 308
                 },
                 "from": {
                     "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\strings.xml",
@@ -61,11 +99,11 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 222,
+                    "startOffset": 313,
                     "endColumn": 47,
-                    "endOffset": 265
+                    "endOffset": 356
                 },
                 "from": {
                     "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\strings.xml",
@@ -80,11 +118,11 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 270,
+                    "startOffset": 361,
                     "endColumn": 52,
-                    "endOffset": 318
+                    "endOffset": 409
                 },
                 "from": {
                     "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\strings.xml",
@@ -99,12 +137,12 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 323,
-                    "endLine": 13,
+                    "startOffset": 414,
+                    "endLine": 15,
                     "endColumn": 12,
-                    "endOffset": 609
+                    "endOffset": 700
                 },
                 "from": {
                     "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\styles.xml",
@@ -120,12 +158,12 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 614,
-                    "endLine": 16,
+                    "startOffset": 705,
+                    "endLine": 18,
                     "endColumn": 12,
-                    "endOffset": 769
+                    "endOffset": 860
                 },
                 "from": {
                     "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\styles.xml",
@@ -136,6 +174,27 @@
                         "endLine": 17,
                         "endColumn": 12,
                         "endOffset": 665
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 865,
+                    "endLine": 30,
+                    "endColumn": 12,
+                    "endOffset": 1496
+                },
+                "from": {
+                    "file": "C:\\Users\\qq\\Desktop\\FilterDEMO1\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 671,
+                        "endLine": 30,
+                        "endColumn": 12,
+                        "endOffset": 1302
                     }
                 }
             }

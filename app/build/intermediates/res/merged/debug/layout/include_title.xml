@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/s_black"
+    android:orientation="horizontal">
+
+
+    <ImageButton
+        android:id="@+id/title_leftImageBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@color/s_black"
+        android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/title_middleTextView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="拦截管家"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/title_rightBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:text="注册/重新登陆"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:gravity="right|center"
+        android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+        android:visibility="gone"
+        />
+</LinearLayout>

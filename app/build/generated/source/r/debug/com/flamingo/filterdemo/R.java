@@ -10,33 +10,68 @@ package com.flamingo.filterdemo;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int s_black=0x7f060000;
+        public static final int select_mode_black=0x7f060001;
+    }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int abc_ic_ab_back_mtrl_am_alpha=0x7f020000;
+        public static final int abc_ic_menu_moreoverflow_mtrl_alpha=0x7f020001;
+        public static final int add=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int select_mode_textview=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f080006;
-        public static final int bt_emulate=0x7f080002;
-        public static final int ed_phonenumber=0x7f080001;
-        public static final int ll1=0x7f080000;
-        public static final int ls_history=0x7f080003;
-        public static final int my_start_service=0x7f080004;
-        public static final int my_stop_service=0x7f080005;
+        public static final int action_settings=0x7f09001c;
+        public static final int bt_emulate=0x7f090006;
+        public static final int ed_phonenumber=0x7f090005;
+        public static final int intercept_listView=0x7f090000;
+        public static final int ll1=0x7f090004;
+        public static final int ls_history=0x7f090007;
+        public static final int mode_black_btn=0x7f090003;
+        public static final int mode_black_editText=0x7f090002;
+        public static final int mode_black_listView=0x7f090001;
+        public static final int mode_time_btn=0x7f090018;
+        public static final int mode_time_edit1=0x7f090016;
+        public static final int mode_time_edit2=0x7f090017;
+        public static final int my_all=0x7f09000b;
+        public static final int my_change=0x7f09000a;
+        public static final int my_exit=0x7f09000c;
+        public static final int my_start_service=0x7f090008;
+        public static final int my_stop_service=0x7f090009;
+        public static final int select_black=0x7f09000f;
+        public static final int select_black1=0x7f090010;
+        public static final int select_btn=0x7f090015;
+        public static final int select_no=0x7f090011;
+        public static final int select_no1=0x7f090012;
+        public static final int select_place=0x7f090013;
+        public static final int select_place1=0x7f090014;
+        public static final int select_time=0x7f09000d;
+        public static final int select_time1=0x7f09000e;
+        public static final int title_leftImageBtn=0x7f090019;
+        public static final int title_middleTextView=0x7f09001a;
+        public static final int title_rightBtn=0x7f09001b;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int activity_mymain=0x7f030001;
+        public static final int activity_all_intercept=0x7f030000;
+        public static final int activity_blackmode=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int activity_mymain=0x7f030003;
+        public static final int activity_select=0x7f030004;
+        public static final int activity_timemode=0x7f030005;
+        public static final int include_title=0x7f030006;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060000;
-        public static final int app_name=0x7f060001;
-        public static final int hello_world=0x7f060002;
+        public static final int action_settings=0x7f070000;
+        public static final int app_name=0x7f070001;
+        public static final int hello_world=0x7f070002;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
@@ -51,5 +86,6 @@ public final class R {
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f040001;
+        public static final int MainButton=0x7f040002;
     }
 }

@@ -11,10 +11,17 @@ import com.flamingo.filterdemo.core.AbsTrigger;
 import com.flamingo.filterdemo.core.BlockerBuilder;
 import com.flamingo.filterdemo.core.IBlocker;
 import com.flamingo.filterdemo.core.IFilter;
+import com.flamingo.filterdemo.entity.ModeSelect;
 import com.flamingo.filterdemo.impl.InCallingHandler;
 import com.flamingo.filterdemo.impl.InCallingTrigger;
 import com.flamingo.filterdemo.impl.NumeralFilter;
 import com.flamingo.filterdemo.impl.PrefixFilter;
+import com.flamingo.filterdemo.impl.SystemContactFilter;
+import com.flamingo.filterdemo.impl.TimeRangFilter;
+import com.flamingo.filterdemo.utils.ModeSelectKeeper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -24,7 +31,7 @@ public class ServiceMain extends Service {
 
     private IBlocker mBlocker = null;
     private AbsTrigger mTrigger = new InCallingTrigger();
-    private AbsHandler mHandler = new InCallingHandler();
+    private AbsHandler mHandler = new InCallingHandler(ServiceMain.this);
 
     private String phoneNumber;
     private BroadcastTrigger myBroadcast;
@@ -61,15 +68,33 @@ public class ServiceMain extends Service {
     private void setupBlocker() {
         BlockerBuilder builder = new BlockerBuilder();
 
+
+        //自定义常见的白名单
+        List<String> list=new ArrayList<String>();
+        list.add("95588");
+        list.add("110");
+
+        ModeSelect modeSelect= ModeSelectKeeper.readAccessDate(this);
+        String modeOne=modeSelect.getModeOne();
+        String modeTwo=modeSelect.getModeTwo();
+        String modeThree=modeSelect.getModeThree();
+        String modeFour=modeSelect.getModeFour();
+
         mBlocker = builder
                 .setTrigger(mTrigger)
                 .setHandler(mHandler)
-                .addFilters(new NumeralFilter(IFilter.OP_PASS, "95555", "95588"))         //实现白名单放行
-                .addFilters(new NumeralFilter(IFilter.OP_BLOCKED, "106223", "107445"))   //实现黑名单放行
-                .addFilters(new PrefixFilter(IFilter.OP_BLOCKED, "156", "10086", "134", "188")) //前缀拦截
-//				.addFilters(new LocationFilter()) //实现归属地拦截， 进阶课程的内容
-//				.addFilters(new SystemContactFilter()) //系统联系人过滤， 进阶课程的内容
+                .addFilters(new NumeralFilter(IFilter.OP_PASS, list))         //实现白名单放行.create();
                 .create();
+
+        if(modeOne.equals("1")){
+            builder.addFilters(new TimeRangFilter(this));
+        }
+        if(modeTwo.equals("1")){
+            builder.addFilters(new NumeralFilter(IFilter.OP_BLOCKED, ServiceMain.this));
+        }
+        if(modeThree.equals("1")){
+            builder.addFilters(new SystemContactFilter(ServiceMain.this));
+        }
 
         mBlocker.enable();
         if (!TextUtils.isEmpty(phoneNumber)) {

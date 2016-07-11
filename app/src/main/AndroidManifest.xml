@@ -6,11 +6,16 @@
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="21" />
 
     <uses-permission android:name = "android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+
+    <!-- 读联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 写联系人权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
 
     <application
@@ -19,7 +24,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".demo.MyActivity"
+            android:name=".aty.MyActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +40,10 @@
         </receiver>
 
         <service android:name=".tool.ServiceMain"></service>
+
+        <activity android:name=".aty.ModeSelectAty"></activity>
+        <activity android:name=".aty.BlackModeAty"></activity>
+        <activity android:name=".aty.TimeModeAty"></activity>
     </application>
 
 </manifest>

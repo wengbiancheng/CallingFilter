@@ -3,24 +3,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    >
+
+    <include layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
 
-    <Button
-        android:id="@+id/my_start_service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="开启服务"/>
+        <Button
+            android:id="@+id/my_start_service"
+            style="@style/MainButton"
+            android:text="开启拦截服务"/>
 
-    <Button
-        android:id="@+id/my_stop_service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="停止服务服务"/>
+        <Button
+            android:id="@+id/my_stop_service"
+            style="@style/MainButton"
+            android:text="停止拦截服务"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="修改配置"/>
+        <Button
+            android:id="@+id/my_change"
+            style="@style/MainButton"
+            android:text="修改拦截模式"/>
+
+        <Button
+            android:id="@+id/my_all"
+            style="@style/MainButton"
+            android:text="查看拦截历史"/>
+
+        <Button
+            android:id="@+id/my_exit"
+            style="@style/MainButton"
+            android:text="退出程序"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>

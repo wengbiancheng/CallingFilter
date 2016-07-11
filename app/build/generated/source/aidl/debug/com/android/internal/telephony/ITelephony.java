@@ -44,22 +44,18 @@ case INTERFACE_TRANSACTION:
 reply.writeString(DESCRIPTOR);
 return true;
 }
-case TRANSACTION_basicTypes:
+case TRANSACTION_endCall:
 {
 data.enforceInterface(DESCRIPTOR);
-int _arg0;
-_arg0 = data.readInt();
-long _arg1;
-_arg1 = data.readLong();
-boolean _arg2;
-_arg2 = (0!=data.readInt());
-float _arg3;
-_arg3 = data.readFloat();
-double _arg4;
-_arg4 = data.readDouble();
-java.lang.String _arg5;
-_arg5 = data.readString();
-this.basicTypes(_arg0, _arg1, _arg2, _arg3, _arg4, _arg5);
+boolean _result = this.endCall();
+reply.writeNoException();
+reply.writeInt(((_result)?(1):(0)));
+return true;
+}
+case TRANSACTION_answerRingingCall:
+{
+data.enforceInterface(DESCRIPTOR);
+this.answerRingingCall();
 reply.writeNoException();
 return true;
 }
@@ -81,23 +77,30 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-/**
-     * Demonstrates some basic types that you can use as parameters
-     * and return values in AIDL.
-     */
-@Override public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, java.lang.String aString) throws android.os.RemoteException
+@Override public boolean endCall() throws android.os.RemoteException
+{
+android.os.Parcel _data = android.os.Parcel.obtain();
+android.os.Parcel _reply = android.os.Parcel.obtain();
+boolean _result;
+try {
+_data.writeInterfaceToken(DESCRIPTOR);
+mRemote.transact(Stub.TRANSACTION_endCall, _data, _reply, 0);
+_reply.readException();
+_result = (0!=_reply.readInt());
+}
+finally {
+_reply.recycle();
+_data.recycle();
+}
+return _result;
+}
+@Override public void answerRingingCall() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
 try {
 _data.writeInterfaceToken(DESCRIPTOR);
-_data.writeInt(anInt);
-_data.writeLong(aLong);
-_data.writeInt(((aBoolean)?(1):(0)));
-_data.writeFloat(aFloat);
-_data.writeDouble(aDouble);
-_data.writeString(aString);
-mRemote.transact(Stub.TRANSACTION_basicTypes, _data, _reply, 0);
+mRemote.transact(Stub.TRANSACTION_answerRingingCall, _data, _reply, 0);
 _reply.readException();
 }
 finally {
@@ -106,11 +109,9 @@ _data.recycle();
 }
 }
 }
-static final int TRANSACTION_basicTypes = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);
+static final int TRANSACTION_endCall = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);
+static final int TRANSACTION_answerRingingCall = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);
 }
-/**
-     * Demonstrates some basic types that you can use as parameters
-     * and return values in AIDL.
-     */
-public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, java.lang.String aString) throws android.os.RemoteException;
+public boolean endCall() throws android.os.RemoteException;
+public void answerRingingCall() throws android.os.RemoteException;
 }
