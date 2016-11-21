@@ -27,6 +27,8 @@ import java.util.List;
  */
 public class BlackModeAty extends Activity {
 
+
+
     private ImageButton title_leftBtn;
     private TextView title_middle;
     private ListView listView;
