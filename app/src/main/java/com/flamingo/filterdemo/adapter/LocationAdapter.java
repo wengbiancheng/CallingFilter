@@ -25,6 +25,7 @@ public class LocationAdapter extends BaseAdapter {
     private Context context;
 
     //更新分支操作
+    //分支操作成功
     private Handler handler;
     private List<String> list = new ArrayList<String>();
     Map<Integer, Boolean> isCheckMap = new HashMap<Integer, Boolean>();
